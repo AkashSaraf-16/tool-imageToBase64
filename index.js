@@ -25,9 +25,9 @@ async function convertToBase64FileSystem(url) {
     return imgPromise;
 }
 
-// const base64url = convertToBase64Canvas('https://maps.googleapis.com/maps/api/staticmap?center=38.416245,-121.466911&zoom=21&size=598x600&markers=icon:https://tinyurl.com/2dt7tb63|38.4162296,-121.4669364&markers=icon:https://tinyurl.com/2dt7tb63|38.4161809,-121.4670027&markers=icon:https://tinyurl.com/2pjtpus6|38.4162362,-121.46688350000001&markers=icon:https://tinyurl.com/2pjtpus6|38.4161715,-121.4669685&markers=icon:https://tinyurl.com/2pjtpus6|38.416277199999996,-121.4669182&maptype=satellite&key=AIzaSyCWYJz8prBHnYy9kXP9junbqQIARXx3pGk')
+// const base64url = convertToBase64Canvas(url);
 
-const base64url = convertToBase64FileSystem('https://maps.googleapis.com/maps/api/staticmap?center=38.416245,-121.466911&zoom=21&size=598x600&markers=icon:https://tinyurl.com/2dt7tb63|38.4162296,-121.4669364&markers=icon:https://tinyurl.com/2dt7tb63|38.4161809,-121.4670027&markers=icon:https://tinyurl.com/2pjtpus6|38.4162362,-121.46688350000001&markers=icon:https://tinyurl.com/2pjtpus6|38.4161715,-121.4669685&markers=icon:https://tinyurl.com/2pjtpus6|38.416277199999996,-121.4669182&maptype=satellite&key=AIzaSyCWYJz8prBHnYy9kXP9junbqQIARXx3pGk');
+const base64url = convertToBase64FileSystem(url);
 base64url.then(val => base64ToImage(val));
 
 function base64ToImage(url) {
