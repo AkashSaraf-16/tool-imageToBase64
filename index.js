@@ -35,8 +35,8 @@ function base64ToImage(url) {
     image.src = url;
     image.crossOrigin = 'Anonymous';
     const canvas = document.createElement("canvas");
-    canvas.height = image.naturalHeight;
-    canvas.width = image.naturalWidth;
+    canvas.height = image.height;
+    canvas.width = image.width;
     console.log(canvas.height, canvas.width);
     const ctx = canvas.getContext("2d");
     image.addEventListener('load', (e) => {
